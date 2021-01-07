@@ -1,5 +1,5 @@
 # basic-linters
-Добавление основных линтеров в проект
+Добавление основных линтеров в проект.
 
 ### Необходимые пакеты npm
 1. stylelint-scss
@@ -19,7 +19,7 @@
 npm i stylelint-scss stylelint-prettier stylelint-order stylelint-config-rational-order stylelint-config-prettier@7.0.0 stylelint-config-airbnb stylelint prettier lint-staged husky eslint eslint-config-prettier eslint-plugin-prettier --save-dev
 
 ### Блок scripts в package.json
-Добавляем к остальным скриптам в блоке скрипта для проверки проекта на ошибки  
+Добавляем в блок scripts команды для запуска линтеров для проверки проекта на ошибки.    
 ```html 
 "scripts": {  
   "lint:js": "eslint src/**/*.js",  
@@ -29,10 +29,10 @@ npm i stylelint-scss stylelint-prettier stylelint-order stylelint-config-rationa
 }
 ```
 ### Запуск линтеров перед созданием коммита
-В package.json добавляем настройки для husky и lint-staged    
+В package.json добавляем настройки для husky и lint-staged.    
 #### Важный момент!
 Если линтер встраивается в текущий проект,    
-то хуках husky необходимо прописать "pre-commit": "npm run lint". После исправления ошибок линтера (если таковые будут), создания коммита, необходимо переписать хук на "lint-staged", т.е. "pre-commit": "lint-staged"
+то в хуках husky необходимо прописать "pre-commit": "npm run lint". После исправления ошибок линтера (если таковые будут), создания коммита, необходимо переписать хук на "lint-staged", т.е. "pre-commit": "lint-staged".
 ***
 ```html
 "husky": {  
@@ -46,8 +46,8 @@ npm i stylelint-scss stylelint-prettier stylelint-order stylelint-config-rationa
   }
 ```
 ### Файл stylelint.config.js
-В корне проекта создаем файл stylelint.config.js  
-В нем прописываем следующие настройки
+В корне проекта создаем файл stylelint.config.js.  
+В нем прописываем следующие настройки:
 ```html
 module.exports = {  
     extends: ["stylelint-config-airbnb",
