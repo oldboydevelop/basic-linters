@@ -49,7 +49,7 @@ npm i stylelint-scss stylelint-prettier stylelint-order stylelint-config-rationa
 В нем прописываем следующие настройки:
 ```html
 module.exports = {
-    extends: ["stylelint-config-airbnb",
+    extends: [
     "stylelint-config-rational-order",
     "stylelint-prettier/recommended"],
     plugins: [
@@ -75,11 +75,13 @@ module.exports = {
 ### Файл .prettierignore
 В корне проекта создаем файл .prettierrc
 В него добавляем строки:
+```html 
 .DS_Store
 node_modules
 package-lock.json
 dist
 npm-debug.log*
+```
 ### Файл .eslint
 В корне проекта создаем файл .eslintrc
 В него добавляем настройки:
